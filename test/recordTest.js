@@ -26,8 +26,10 @@ describe('record', function () {
 		var record = new Record(fixture);
 		record.start('record');
 		requesting().then(function (responses) {
-			record.stop();
-			checkResponses(responses);
+			return Q.ninvoke(record, 'stop')
+				.then(function () {
+					checkResponses(responses);
+				});
 		}).nodeify(done);
 	});
 
@@ -35,8 +37,10 @@ describe('record', function () {
 		var record = new Record(fixture);
 		record.start('replay');
 		requesting().then(function (responses) {
-			record.stop();
-			checkResponses(responses);
+			return Q.ninvoke(record, 'stop')
+				.then(function () {
+					checkResponses(responses);
+				});
 		}).nodeify(done);
 	});
 });
