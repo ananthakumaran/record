@@ -1,0 +1,19 @@
+{
+  "name": "record",
+  "version": "0.0.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "dependencies": {
+    "yamljs": "~0.1.5",
+    "underscore": "~1.6.0",
+    "mkdirp": "~0.5.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.18.2",
+    "expect.js": "~0.3.1",
+    "request": "~2.34.0",
+    "q": "~1.0.1"
+  }
+}
